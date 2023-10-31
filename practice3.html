@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 7 Practice 3</title>
+        <h1>EECS 348 Lab Seven Practice Three</h1>
+    </head>
+
+    <body>
+        <label>Password:</label> 
+        <input id="pass1" type="text"><br>
+        <label>Password 2:</label>
+        <input id="pass2" type="text"><br>
+        <button id="btn" onclick="checkPasswords()">Submit</button>
+        <p id="match">The Passwords Match!</p>
+        <p id="noMatch">The Passwords do not Match</p>
+        <p id="eight">The Password must be eight characters long or more</p>
+        
+        <style>
+            p {
+                display: none;
+            }
+
+        </style>
+        <script>
+            function checkPasswords(){
+                document.getElementById("match").style.display = "none"
+                document.getElementById("noMatch").style.display = "none"
+                document.getElementById("eight").style.display = "none"
+
+                var pass1 = document.getElementById("pass1").value
+                var pass2 = document.getElementById("pass2").value
+                
+                if ((pass1.length < 8) || (pass2.length < 8)) {
+                    document.getElementById("eight").style.display = "block"
+                }
+
+                else if (pass1 == pass2) {
+                    document.getElementById("match").style.display = "block"
+                }
+
+                else {
+                    document.getElementById("noMatch").style.display = "block"
+                }
+            }
+        </script>
+
+    </body>
+</html>

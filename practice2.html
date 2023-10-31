@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 7 Practice 2</title>
+        <h1>EECS 348 Lab Seven Practice Two</h1>
+    </head>
+
+    <body>
+        <p id="paragraph" style="color:black; border:solid black">Daisy, Daisy, give me your answer do<br>
+            I'm half crazy all for the love of you<br>
+            It won't be a stylish marriage<br>
+            I can't afford a carriage<br>
+            But you'll look sweet upon the seat<br>
+            Of a bicycle built for two<br></p>
+
+        <a>Paragraph Color: <input id="paragraphColor" type="color"></a>
+        <a>Border Color: <input id="borderColor" type="color"></a>
+    
+    <script>
+        var p_color = document.getElementById("paragraphColor").value;
+        var b_color = document.getElementById("borderColor").value;
+        document.getElementById("paragraph").style.color = p_color;
+        document.getElementById("paragraph").style.border = "solid" + b_color;
+    </script>
+
+    </body>
+</html>
